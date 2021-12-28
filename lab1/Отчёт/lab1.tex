@@ -1,0 +1,98 @@
+\documentclass[12pt,onecolumn]{article}
+
+\usepackage{listings}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage[russian]{babel}
+\everymath{\displaystyle}
+\usepackage{color}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=25mm, 
+  right=15mm, 
+  bottom=25mm, 
+  left=15mm
+}
+
+\begin{document}
+
+\begin{center}
+    Санкт-Петербургский Национальный Исследовательский\\ 
+    Университет ИТМО\\
+    Факультет Программной Инженерии и Компьютерной Техники\\
+    \includegraphics[scale=0.3]{itm.jpg} % нужно закинуть картинку логтипа в папку с отчетом
+\end{center}
+\vspace{1cm}
+
+
+\begin{center}
+    \large \textbf{Вариант №333893}\\
+    \textbf{Лабораторная работа №1}\\
+    по дисциплине\\
+    \textbf{\textcolor{red}{\textit{'Программирование'}}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+  Выполнил Студент  группы P3116\\
+  \textbf{Алексей Лапин}\\
+  Преподаватель: \\
+  \textbf{Сорокин Роман Борисович}\\
+\end{flushright}
+
+\vspace{6cm}
+\begin{center}
+    г. Санкт-Петербург\\
+    2021г.
+\end{center}
+
+\newpage
+\section{Текст задания}
+\begin{enumerate} 
+\itemСоздать одномерный массив a типа short. Заполнить его чётными числами от 6 до 20 включительно в порядке возрастания.
+\itemСоздать одномерный массив x типа float. Заполнить его 17-ю случайными числами в диапазоне от -3.0 до 15.0.
+\itemСоздать двумерный массив a размером 8x17. Вычислить его элементы по следующей формуле (где x = x[j]):
+\begin{itemize}  
+\item если a[i] = 16, то a[i][j]=$e ^{(\frac{2}{3} + x \cdot (x-1))^3}$;
+\item если $a[i] \in \{6, 12, 18, 20\}$, то $a[i][j]=\frac{1}{3}\cdot\ln((|x|+1)^x)$
+\item для остальных значений a[i]: $a[i][j]=\frac{1}{2}/(3 - \arctan(\cos(x)))$.
+\end{itemize}
+\item Напечатать полученный в результате массив в формате с двумя знаками после запятой.
+\end{enumerate}
+\lstloadlanguages{Java}
+\section{Исходный код программы}
+\definecolor{mygray}{RGB}{120,120,120}
+\lstset{extendedchars =/true,
+breaklines=true,
+basicstyle=\ttfamily\fontsize{9pt}{9pt}\selectfont,
+commentstyle=\color{mygray},
+keywordstyle=\color{blue}}
+\lstinputlisting[language=Java,numbers=left]{Main.java}
+\newpage
+\section{Результат выполнения}
+\begin{lstlisting}[basicstyle=\ttfamily\fontsize{6pt}{6pt}\selectfont]
+5,52	0,04	7,05	5,52	9,16	0,24	-0,12	-0,01	12,74	6,98	-0,29	1,98	8,92	1,76	0,12	12,00	-0,12	
+0,18	0,22	0,13	0,18	0,17	0,20	0,21	0,23	0,17	0,13	0,19	0,14	0,16	0,13	0,21	0,20	0,21	
+0,18	0,22	0,13	0,18	0,17	0,20	0,21	0,23	0,17	0,13	0,19	0,14	0,16	0,13	0,21	0,20	0,21	
+5,52	0,04	7,05	5,52	9,16	0,24	-0,12	-0,01	12,74	6,98	-0,29	1,98	8,92	1,76	0,12	12,00	-0,12	
+0,18	0,22	0,13	0,18	0,17	0,20	0,21	0,23	0,17	0,13	0,19	0,14	0,16	0,13	0,21	0,20	0,21	
+Infin	1,08	Infin	Infin	Infin	1,39	420,99	1,75	Infin	Infin	Infin	Infin	Infin	Infin	1,10	Infin  625,07	
+5,52	0,04	7,05	5,52	9,16	0,24	-0,12	-0,01	12,74	6,98	-0,29	1,98	8,92	1,76	0,12	12,00	-0,12	
+5,52	0,04	7,05	5,52	9,16	0,24	-0,12	-0,01	12,74	6,98	-0,29	1,98	8,92	1,76	0,12	12,00	-0,12
+\end{lstlisting}
+\section{Вывод}
+В этой лабораторной работе я научился работать с:
+\begin{itemize}
+\item Одномерными и двухмерными массивами;
+\item Математическими функциями стандартной библиотеки Java;
+\item Циклами и ветвлениями;
+\item Форматированным выводом числовых данных;
+
+
+\end{itemize}
+\end{document}
